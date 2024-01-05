@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    overflow: none;
+    padding: 1rem;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: royalblue;
+}
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+    padding: 2rem 0 2rem 0;
+
+}
+
+.images:active{
+    transform: scale(2);
+    position: absolute;
+    top: 30%;
+    left: 40%;
+}

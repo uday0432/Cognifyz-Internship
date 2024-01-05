@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <style>
+        body{
+            height: 100vh; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main{
+            height: 50%;
+            width: 30%;
+            background-color: aqua;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        h1{
+            margin-left: 8.5rem;  
+        }
+        .maincont{
+            margin-left: 2.5rem;
+        }
+    </style>
+</head> 
+<body>
+    <script>
+        function cal(){
+            var n1 = document.getElementById('in1').value;
+            var n2 = document.getElementById('in2').value;
+            var oper = document.getElementById('operation').value;
+
+            if(n1.includes(".")){
+                n1 = parseFloat(n1);
+                n2 = parseFloat(n2);
+            }
+            else{
+                n1 = parseInt(n1);
+                n2 = parseInt(n2);
+            }
+
+            if(oper === 'add'){
+                document.getElementById('result').value = n1+n2;
+            }
+            else if(oper === 'sub'){
+                document.getElementById('result').value = n1-n2;
+            }
+            else if(oper === 'mul'){
+                document.getElementById('result').value = n1*n2;
+            }
+            else if(oper === 'div'){
+                document.getElementById('result').value = n1/n2;
+            }
+            else{
+                alert("select valid operator");
+            }
+
+        }
+    </script>
+    <div class="main">
+        <h1>Calculator</h1>
+        <div class="maincont">
+        <label for="in1">Enter the first number:&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="number" id="in1"><br><br>
+        <label for="in2">Enter the second number:&nbsp; &nbsp;</label>
+        <input type="number" id="in2"><br><br>
+        <label for="operation">Operation:&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</label>
+        <select name="" id="operation">
+            <option value="add">+</option>
+            <option value="sub">-</option>
+            <option value="mul">*</option>
+            <option value="div">/</option>
+            <option value="">None</option>
+        </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button onclick="cal();">Calculate</button><br><br>
+        <label for="result">Result:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="text" id="result">
+        </div>
+    </div>
+    
+</body>
+</html>

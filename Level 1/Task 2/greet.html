@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greetings</title>
+    <style>
+          body{
+            height: 100vh; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #greet{
+            cursor: pointer;
+            height: 10vh;
+            width: 10vw;
+            font-size: 1rem;    
+        }
+    </style>
+</head>
+<body>
+
+    <button id="greet" onclick="greetings();">Greet me</button>
+
+    <script>
+        const date = new Date();
+        let hour = date.getHours();
+        let min = date.getMinutes();
+        function greetings(){
+
+            if(hour>0 && hour<4){
+                alert("Good Night");
+            }
+            else if(hour>4 && hour<12){
+                alert("Good Morning");
+            }
+            else if(hour>12 && hour<16){
+                alert("Good Afternoon");
+            }
+            else{
+                alert("Good Evening");
+            }
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Change</title>
+    <style>
+        body{
+          height: 100vh; 
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      #change{
+          cursor: pointer;
+          height: 10vh;
+          width: 20vw;
+          font-size: 1rem;    
+          border-radius: 50px;
+      }
+  </style>
+</head>
+<body id="body">
+    <button id="change" onclick="colorChange();">Click to change color</button>
+    <script>
+        function colorChange(){
+            const change = document.getElementById('change');
+            let r = Math.floor(Math.random() * 256);
+            let g = Math.floor(Math.random() * 256);
+            let b = Math.floor(Math.random() * 256);
+
+            document.getElementById("body").style = "background-color:rgb("+r+","+g+","+b+")";
+            change.style =  "background-color:rgb("+g+","+r+","+b+")";
+        }
+    </script>
+</body>
+</html>
