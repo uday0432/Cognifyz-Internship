@@ -62,7 +62,7 @@ body{
     font-size: 130px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
-    background-image: url("/backgroundimage.jpg");
+    background-image: url("backgroundimage.jpg");
     background-position: fixed;
     background-repeat: repeat;
     background-size: contain;
